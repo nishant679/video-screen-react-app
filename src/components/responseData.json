@@ -1,0 +1,44 @@
+[
+    {
+        "dateTime": "2021-02-08T15:00:06.673Z",
+        "status": "STATUS_DOWNLOADED",
+        "thumbnail": "https://interview-images-roads.s3.amazonaws.com/Rectangle+281.png",
+        "fileSize": "37.31 MB",
+        "id": 0
+    },
+    {
+        "dateTime": "2021-04-12T04:57:22.154Z",
+        "status": "STATUS_UPLOADED",
+        "thumbnail": "https://interview-images-roads.s3.amazonaws.com/Rectangle+281.png",
+        "fileSize": "69.55 MB",
+        "id": 1
+    },
+    {
+        "dateTime": "2020-02-27T05:36:00.440Z",
+        "status": "STATUS_UPLOADED",
+        "thumbnail": "https://interview-images-roads.s3.amazonaws.com/Rectangle+284.png",
+        "fileSize": "44.78 MB",
+        "id": 2
+    },
+    {
+        "dateTime": "2020-04-23T09:11:43.510Z",
+        "status": "STATUS_NONE",
+        "thumbnail": "https://interview-images-roads.s3.amazonaws.com/Rectangle+284.png",
+        "fileSize": "80.89 MB",
+        "id": 3
+    },
+    {
+        "dateTime": "2021-04-19T13:25:39.320Z",
+        "status": "STATUS_UPLOADED",
+        "thumbnail": "https://interview-images-roads.s3.amazonaws.com/Rectangle+284.png",
+        "fileSize": "94.43 MB",
+        "id": 4
+    },
+    {
+        "dateTime": "2020-04-19T17:08:28.988Z",
+        "status": "STATUS_UPLOADED",
+        "thumbnail": "https://interview-images-roads.s3.amazonaws.com/Rectangle+280.png",
+        "fileSize": "88.71 MB",
+        "id": 5
+    }
+]
