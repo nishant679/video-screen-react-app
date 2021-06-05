@@ -40,7 +40,7 @@ const VideoList = (props) => {
 
                     return(
                         <div className="col-sm-6">
-                            <div className="thumbnail container"> <img src={thumbnail} alt="video"/></div> 
+                            <div className="thumbnail container"> <img style={{maxWidth : '90%'}} src={thumbnail} alt="video"/></div> 
                             <div className="d-flex justify-content-around mt-1">
                                 <div className="h5">{date}</div>
                                 <div className="status-icon h5"> <img src={IconMapper[status]} alt="status" /></div>
