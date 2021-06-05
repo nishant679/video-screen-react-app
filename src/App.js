@@ -3,6 +3,7 @@ import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import VideoList from './components/VideoList';
 
 
 const API_URL = 'https://qgkpjarwfl.execute-api.us-east-1.amazonaws.com/dev/getNormalVideoFiles';
@@ -37,43 +38,9 @@ function App() {
 
 
 
-
-
-
-      var myHeaders = new Headers();
-      myHeaders.append("x-api-key", "jvmNAyPNr1JhiCeUlYmB2ae517p3Th0aGG6syqMb");
-
-      var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-      };
-
-      fetch("https://qgkpjarwfl.execute-api.us-east-1.amazonaws.com/dev/getNormalVideoFiles?limit=6&offset=0", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-      
-
-
-
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <VideoList />
     </div>
   );
 }
