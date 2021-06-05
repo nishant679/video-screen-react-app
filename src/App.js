@@ -4,13 +4,14 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import VideoList from './components/VideoList';
+import Header from './components/Header';
 
 
 const API_URL = 'https://qgkpjarwfl.execute-api.us-east-1.amazonaws.com/dev/getNormalVideoFiles';
 
 function App() {
 
-  const [videList, updateVideoList] = useState([]),
+  const [videoList, updateVideoList] = useState([]),
     [loading, setLoading] = useState(false),
     limit = 6,
     offset = 0;
@@ -40,7 +41,8 @@ function App() {
 
   return (
     <div className="App">
-      <VideoList />
+      <Header />
+      <VideoList data={videoList}/>
     </div>
   );
 }

@@ -1,40 +1,60 @@
 import React from 'react';
+import download from '../icons/STATUS_DOWNLOADED.png';
+import upload from '../icons/STATUS_UPLOADED.png';
+import none from '../icons/STATUS_NONE.png';
 
 const localData = require('./responseData.json');
 
-const downloadIconUrl = 'src/icons/STATUS_DOWNLOADED.png';
+const downloadIcon = require('../icons/STATUS_DOWNLOADED.png');
+
+const IconMapper = {
+    "STATUS_DOWNLOADED" : download,
+    "STATUS_UPLOADED" : upload,
+    "STATUS_NONE" : none
+}
 
 const VideoList = (props) => {
 
-    const data = localData || props.data;
+    const data = localData || props.data,
+        loading = props.loading || false;
+
+    if(loading){
+        return(
+            <h5>Loading</h5>
+        );
+    };
 
     return(
         <div className="container">
+        <div className="row">
             {
                 data.map(video => {
                     const thumbnail = video.thumbnail || "",
-                        date = video.date || "",
+                        dateTime = video.dateTime || "",
                         status = video.status || "",
                         fileSize = video.fileSize || "",
-                        icon = downloadIconUrl,
-                        time = "89980890";
+                        dateString = new Date(dateTime),
+                        date = dateString.toLocaleDateString(),
+                        time = dateString.toLocaleTimeString();
+
 
                     return(
-                        <div>
-                            <div className="thumbnail"> <img src={thumbnail} alt="video"/></div> 
-                            <div>
-                                <div>{date}</div>
-                                <div className="status-icon"> <img src="/home/nishant/web-projects/video-files-react-app/src/icons/STATUS_DOWNLOADED.png" alt="status" /></div>
+                        <div className="col-sm-6">
+                            <div className="thumbnail container"> <img src={thumbnail} alt="video"/></div> 
+                            <div className="d-flex justify-content-around mt-1">
+                                <div className="h5">{date}</div>
+                                <div className="status-icon h5"> <img src={IconMapper[status]} alt="status" /></div>
                             </div>
-                            <div>
-                                <div>{time}</div>
-                                <div>{fileSize}</div>
+                            <div className="d-flex justify-content-around">
+                                <div className="h5">{'@ ' + time}</div>
+                                <div className="h5 text-muted">{fileSize}</div>
                             </div>
                         </div>
                     );
 
                 })
             };
+        </div>
         </div>
     );
         
